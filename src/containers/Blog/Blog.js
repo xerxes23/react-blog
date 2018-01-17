@@ -4,7 +4,6 @@ import { Route, NavLink, Switch } from 'react-router-dom';
 import './Blog.css';
 import Posts from './Posts/Posts';
 import NewPost from './NewPost/NewPost';
-import FullPost from './FullPost/FullPost';
 
 const activeStyle = {
     color: 'orange',
@@ -16,6 +15,7 @@ class Blog extends Component {
     render () {
         return (
             <div className='Blog' >
+
                 <header>
                     <nav>
                         <ul>
@@ -31,13 +31,9 @@ class Blog extends Component {
                 </header>
                 
                 <Switch>
-                    <Route exact path='/' component={Posts} />
                     <Route path='/new-post' component={NewPost} />
-                    <Route path='/posts/:id' component={FullPost} />
-                </Switch>
-                
-                
-                
+                    <Route path='/' component={Posts} />
+                </Switch> 
                 
             </div>
         );
