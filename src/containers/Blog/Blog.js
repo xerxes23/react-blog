@@ -6,6 +6,11 @@ import Posts from './Posts/Posts';
 import NewPost from './NewPost/NewPost';
 import FullPost from './FullPost/FullPost';
 
+const activeStyle = {
+    color: 'orange',
+    textDecoration: 'underline'
+}
+
 class Blog extends Component {
 
     render () {
@@ -15,17 +20,11 @@ class Blog extends Component {
                     <nav>
                         <ul>
                             <li><NavLink 
-                            activeStyle={{
-                                color: 'orange',
-                                textDecoration: 'underline'
-                            }} 
+                            activeStyle={activeStyle} 
                             exact
                             to='/'>Home</NavLink></li>
                             <li><NavLink 
-                            activeStyle={{
-                                color: 'orange',
-                                textDecoration: 'underline'
-                            }}
+                            activeStyle={activeStyle}
                             to='/new-post'>New Post</NavLink></li>
                         </ul>
                     </nav>
